@@ -1,0 +1,31 @@
+[package]
+name = "mixxx-librespot-plugin"
+version = "0.1.0"
+edition = "2021"
+license = "MPL-2.0"
+readme = "README.md"
+repository = "https://github.com/acolombier/mixxx-plugin-librespot"
+
+[dependencies]
+env_logger = "0.11.3"
+futures-util = "0.3.30"
+h2 = "0.4.2"
+librespot-audio = {git = "https://github.com/acolombier/librespot.git", branch = "feat/rootlist", default-features = false}
+librespot-metadata = {git = "https://github.com/acolombier/librespot.git", branch = "feat/rootlist", default-features = false}
+librespot-playback = {git = "https://github.com/acolombier/librespot.git", branch = "feat/rootlist", default-features = false}
+librespot-core = {git = "https://github.com/acolombier/librespot.git", branch = "feat/rootlist", default-features = false}
+librespot-discovery = {git = "https://github.com/acolombier/librespot.git", branch = "feat/rootlist", default-features = false}
+log = "0.4.21"
+prost = "0.12.3"
+serde = "1.0.197"
+serde_json = "1.0.114"
+serde_urlencoded = "0.7"
+tokio = { version = "1.36.0", features = ["rt-multi-thread", "macros"] }
+tokio-stream = { version = "0.1.14", features = ["net"] }
+tonic = "0.11.0"
+tower = "0.4.13"
+tracing = { version = "0.1.16" }
+url = "2.5.0"
+
+[build-dependencies]
+tonic-build = { version = "0.11.0", features = ["prost"] }
